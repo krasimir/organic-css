@@ -1,1 +1,6 @@
-$h: 900px;
+/* Atoms */
+@import "atoms/scaffolding/block";
+
+@mixin inherit($o) {
+	@extend %#{$o};
+}

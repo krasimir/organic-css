@@ -1,5 +1,8 @@
 @import "../../organic-css/main.scss";
 
 body {
-	height: $h;
+	@include inherit("block");
+}
+p {
+	@include inherit("block");
 }
