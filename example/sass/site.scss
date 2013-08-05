@@ -1,8 +1,13 @@
+@import "../../organic-css/config.scss";
+
+$textLineHeight: 3;
+
 @import "../../organic-css/main.scss";
 
 body {
-	@include inherit("block");
+	@include inherit(("block", "fz-40"));
 }
 p {
 	@include inherit("block");
 }
+
