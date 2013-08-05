@@ -1,6 +1,5 @@
-/* Atoms */
-@import "atoms/scaffolding/block";
+// Helpers
+@import "helpers";
 
-@mixin inherit($o) {
-	@extend %#{$o};
-}
+// Atoms
+@import "atoms/scaffolding/block";
