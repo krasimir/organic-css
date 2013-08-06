@@ -1,13 +1,23 @@
+// Importing settings
 @import "../../organic-css/config.scss";
 
+// Customization
 $textLineHeight: 3;
 
+// Importing the framework stuff
 @import "../../organic-css/main.scss";
 
+// Your project starts here
 body {
-	@include inherit(("block", "fz-40"));
+	@include atoms(("block", "clearfix", "one-half"));
 }
 p {
-	@include inherit("block");
+	@include atoms("block");
+	@include vendor(border-radius, 10px);
+	@include keyframes('bla') {
+		0% {
+			font-size: 20px;
+		}
+	}
 }
 

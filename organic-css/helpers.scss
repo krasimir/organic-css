@@ -1,5 +1,5 @@
-@mixin inherit($collection) {
+@mixin atoms($collection) {
 	@each $o in $collection {
 		@extend %#{$o};
-	}	
+	}
 }

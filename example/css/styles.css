@@ -5,7 +5,50 @@ body, p {
   box-sizing: border-box;
 }
 
+body:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
 body {
-  font-size: 40px;
-  line-height: 120px;
+  width: 50%;
+}
+
+p {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  @-webkit-keyframes bla {
+    0% {
+      font-size: 20px;
+    }
+}
+
+  @-moz-keyframes bla {
+    0% {
+      font-size: 20px;
+    }
+}
+
+  @-ms-keyframes bla {
+    0% {
+      font-size: 20px;
+    }
+}
+
+  @-o-keyframes bla {
+    0% {
+      font-size: 20px;
+    }
+}
+
+  @keyframes bla {
+    0% {
+      font-size: 20px;
+    }
+}
+
 }
