@@ -1,0 +1,57 @@
+// margin
+%margin-reset { margin: 0; }
+%margin-centered { margin: 0 auto; }
+@include generator('margin-top-', 1, 100);
+@include generator('margin-right-', 1, 100);
+@include generator('margin-bottom-', 1, 100);
+@include generator('margin-left', 1, 100);
+
+// padding
+%padding-reset { padding: 0; }
+@include generator('padding-top-', 1, 100);
+@include generator('padding-right-', 1, 100);
+@include generator('padding-bottom-', 1, 100);
+@include generator('padding-left-', 1, 100);
+
+// border
+%border-none { border: none; }
+@mixin border-dotted($width: 1px, $color: #000) {
+	border: "dotted #{$width} #{$color}";
+}
+
+@mixin border($top: none, $right: none, $bottom: none, $left: none) {
+	border-top: $top;
+	@if $right == none {
+		border-right: $top;
+	} @else {
+		border-right: $right;
+	}
+	@if $bottom == none {
+		border-bottom: $top;
+	} @else {
+		border-bottom: $bottom;
+	}
+	@if $left == none {
+		border-left: $top;
+	} @else {
+		border-left: $left;
+	}
+}
+@mixin border-radius($top-left: none, $top-right: none, $bottom-right: none, $bottom-left: none) {
+	border-top-left-radius: $top-left;
+	@if $top-right == none {
+		border-top-right-radius: $top-left;
+	} @else {
+		border-top-right-radius: $top-right;
+	}
+	@if $bottom-right == none {
+		border-bottom-left-radius: $top-left;
+	} @else {
+		border-bottom-left-radius: $bottom-right;
+	}
+	@if $bottom-left == none {
+		border-bottom-left-radius: $top-left;
+	} @else {
+		border-bottom-left-radius: $bottom-left;
+	}
+}

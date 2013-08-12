@@ -1,0 +1,8 @@
+@mixin body {
+	@include atoms((
+		margin-reset,
+		padding-reset, 
+		(border-dotted, 1px, #F00)
+	));
+	@content;
+}

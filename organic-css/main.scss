@@ -1,17 +1,24 @@
 // Helpers
-@import "helpers";
+@import "helpers/_common";
 
 // Atoms
 @import "atoms/_display";
-@import "atoms/_text-sizes";
-@import "atoms/_text-styles";
+@import "atoms/_text";
 @import "atoms/_clearfix";
 @import "atoms/_widths";
 @import "atoms/_floats";
+@import "atoms/_keyframes";
+@import "atoms/_transition";
+@import "atoms/_vendors";
+@import "atoms/_box-model";
+@import "atoms/_sizes";
+@import "atoms/_position";
 
 // Molecule
-@import "molecules/_vendors";
-@import "molecules/_keyframes";
+@import "molecules/_paragraph.scss";
+@import "molecules/_image.scss";
+@import "molecules/_body.scss";
+@import "molecules/_headings.scss";
 
 // Organelles
 

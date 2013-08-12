@@ -1,0 +1,10 @@
+@mixin width($value: auto) {
+	width: $value;
+}
+@mixin height($value: auto) {
+	height: $value;
+}
+@mixin size($wValue: 100%, $hValue: 100%) {
+	width: $wValue;
+	height: $hValue;
+}

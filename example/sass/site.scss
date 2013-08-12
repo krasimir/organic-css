@@ -2,22 +2,34 @@
 @import "../../organic-css/config.scss";
 
 // Customization
-$textLineHeight: 3;
+// for example:
+// $textLineHeight: 3;
 
 // Importing the framework stuff
 @import "../../organic-css/main.scss";
 
 // Your project starts here
-body {
-	@include atoms(("block", "clearfix", "one-half"));
-}
-p {
-	@include atoms("block");
-	@include vendor(border-radius, 10px);
-	@include keyframes('bla') {
-		0% {
-			font-size: 20px;
-		}
+body, html { 
+	@include body {
+		@include font('Georiga');
 	}
 }
-
+p {
+	@include atoms((
+		(border-dotted, 1px, #F00)
+	));
+}
+// p {
+// 	@include paragraph {
+// 		@include color(#76DE7D, 0, 30%);
+// 		@include font-size(20px, 30px);
+// 	}
+// }
+// h1, h2, h3, h4, h5, h6 { 
+// 	@include heading;
+// 	@include atoms(("normal", "margin-top-20"));
+// }
+// .container {
+// 	@include size(900px, auto);
+// 	@include margin(0, auto, 0, auto);
+// }

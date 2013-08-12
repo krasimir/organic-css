@@ -1,0 +1,7 @@
+@mixin paragraph() {
+	@include atoms("block") {
+		@include margin;
+		@include padding($space, 0, $space, 0);
+	}
+	@content;
+}

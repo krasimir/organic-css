@@ -34,3 +34,23 @@
 %center-text {
 	text-align: center;
 }
+
+@mixin font($f...) {
+	font-family: $f;
+}
+
+@mixin font-size($size, $line-height: false) {
+	font-size: $size;
+	@if $line-height != false {
+		line-height: $line-height;
+	}
+}
+
+@mixin color($color: #000, $light: 0, $dark: 0) {
+	color: $color;
+	@if $light != 0 {
+		color: lighten($color, $light);
+	} @else if $dark != 0 {
+		color: darken($color, $dark);
+	}
+}
