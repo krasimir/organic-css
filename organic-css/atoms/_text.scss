@@ -39,13 +39,6 @@
 	font-family: $f;
 }
 
-@mixin font-size($size, $line-height: false) {
-	font-size: $size;
-	@if $line-height != false {
-		line-height: $line-height;
-	}
-}
-
 @mixin color($color: #000, $light: 0, $dark: 0) {
 	color: $color;
 	@if $light != 0 {
@@ -54,3 +47,6 @@
 		color: darken($color, $dark);
 	}
 }
+
+@include generate-placeholder('font-size', 1, 100);
+@include generate-placeholder('line-height', 1, 100);

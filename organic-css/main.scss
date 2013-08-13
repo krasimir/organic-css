@@ -1,5 +1,5 @@
 // Helpers
-@import "helpers/_common";
+@import "_helpers/_common";
 
 // Atoms
 @import "atoms/_display";
@@ -13,12 +13,14 @@
 @import "atoms/_box-model";
 @import "atoms/_sizes";
 @import "atoms/_position";
+@import "atoms/_colors";
 
 // Molecule
-@import "molecules/_paragraph.scss";
-@import "molecules/_image.scss";
-@import "molecules/_body.scss";
-@import "molecules/_headings.scss";
+@import "molecules/_body";
+@import "molecules/_paragraph";
+@import "molecules/_image";
+@import "molecules/_headings";
+@import "molecules/_link";
 
 // Organelles
 

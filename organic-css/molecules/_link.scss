@@ -1,0 +1,6 @@
+@include define-molecule("link") {
+	@include atoms((
+		black,
+		underline
+	));
+}

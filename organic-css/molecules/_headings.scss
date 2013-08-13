@@ -1,7 +1,11 @@
-@mixin heading {
-	@include atoms("block") {
-		@include margin;
-		@include padding($space, 0, $space, 0);
-	} 
-	@content;
+@include define-molecule("heading") {
+	@include atoms((
+		block,
+		margin-reset,
+		padding-reset,
+		padding-top-10,
+		padding-bottom-10,
+		size-fill-horizontal,
+		bold
+	));
 }
