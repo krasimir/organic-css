@@ -1,4 +1,4 @@
 organic-css
 ===========
 
-Micro CSS framework based on Organic concept
+Micro SASS framework based on Organic/Atomic concept
