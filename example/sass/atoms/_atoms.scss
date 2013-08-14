@@ -1,0 +1,15 @@
+@include define-atom("font-family") {
+	font-family: Georgia;
+}
+@include define-atom("header-column-left-border") {
+	@include border(null, null, null, dotted 1px #999);
+}
+@include define-atom("header-bottom-border") {
+	@include border(null, null, solid 5px #CFCFCF, null);
+}
+@include define-atom("header-title-color") {
+	@include color(#7A9C34);
+}
+@include define-atom("header-title-shadow") {
+	@include text-shadow(3px, -1px, 1px, #CCCCCC);
+}

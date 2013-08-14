@@ -14,7 +14,7 @@
 @include generate-placeholder('padding-left', 0, 100);
 
 // border
-%border-none { border: none; }
+%no-border { border: none; }
 @mixin border($top: none, $right: none, $bottom: none, $left: none) {
 	border-top: $top;
 	@if $right == none {
@@ -35,7 +35,7 @@
 }
 
 // border-radius
-%border-radius { border-radius: none; }
+%no-border-radius { border-radius: none; }
 @include generate-placeholder('border-radius', 0, 100);
 @include generate-placeholder('border-top-left-radius', 0, 100);
 @include generate-placeholder('border-top-right-radius', 0, 100);

@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 				tasks: ['sass']
 			},
 			organic: {
-				files: ['../organic-css/**/*.scss'],
+				files: ['../src/**/*.scss'],
 				tasks: ['sass']
 			}
 		}

@@ -1,21 +1,14 @@
-// Importing settings
-@import "../../organic-css/config.scss";
+// organic css
+@import "../../src/main";
+@import "../../src/molecules/_reset";
 
-// Customization
-// for example: $textLineHeight: 3;
+// custom
 
-// Importing the framework stuff
-@import "../../organic-css/main.scss";
+@import "atoms/_atoms";
 
-body {
-	@include molecules(body);
-}
-h1, h2, h3, h4, h5, h6 {
-	@include molecules(heading);
-}
-p {
-	@include molecules(paragraph);
-}
-a {
-	@include molecules(link);
-}
+@import "molecules/_body";
+@import "molecules/_container";
+@import "molecules/_header";
+@import "molecules/_content";
+
+@import "organelles/_organelles";

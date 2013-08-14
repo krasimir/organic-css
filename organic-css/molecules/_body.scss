@@ -1,8 +1,0 @@
-@include define-molecule("body") {
-	@include atoms((
-		margin-reset,
-		padding-reset,
-		size-fill,
-		font-size-12
-	));
-}

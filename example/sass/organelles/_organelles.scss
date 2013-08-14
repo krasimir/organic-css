@@ -1,0 +1,11 @@
+.header {
+	@include header;
+	@include header-title;
+	@include header-column;
+	@include header-column-link;
+}
+.content {
+	@include content;
+	@include content-title;
+	@include content-column;
+}

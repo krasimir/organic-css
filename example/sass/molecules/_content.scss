@@ -1,0 +1,31 @@
+@mixin content {
+	@include atoms((
+		margin-top-40
+	));
+}
+@mixin content-title {
+	h3 {
+		@include atoms((
+			font-size-80,
+			center-text,
+			normal,
+			margin-bottom-30,
+			line-height-80
+		));
+	}
+}
+@mixin content-column {
+	.column {
+		@include atoms((
+			block,
+			one-half,
+			left
+		));
+	}
+	.column:nth-child(2) {
+		@include atoms(padding-right-20);
+	}
+	.column:nth-child(3) {
+		@include atoms(padding-left-20);
+	}
+}

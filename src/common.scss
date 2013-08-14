@@ -29,32 +29,3 @@
 	}
 	@content;
 }
-
-
-// ****** defining molecule
-@mixin define-molecule($name) {
-	%#{$name} {
-		@content;
-	}
-}
-// ****** molecules
-@mixin molecules($collection: ()) {
-	@each $el in $collection {
-		@extend %#{$el};
-	}
-	@content;
-}
-
-// ****** defining organelles
-@mixin define-organel($name) {
-	%#{$name} {
-		@content;
-	}
-}
-// ****** organelles
-@mixin organelles($collection: ()) {
-	@each $el in $collection {
-		@extend %#{$el};
-	}
-	@content;
-}
