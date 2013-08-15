@@ -9,7 +9,7 @@
         <div class="container">
 
             <header class="header">
-                <h1>OrganicCSS</h1>
+                <h1>oCSS<small>organic cascade style sheet</small></h1>
                 <h2>
                     It's SASS based
                     <a href="http://sass-lang.com/">CSS preprocessor</a>
@@ -22,11 +22,35 @@
 
             <section class="content">
 
-                <h3>Micro framework following atomic design.</h3>    
+                <h2>Micro framework following atomic design.</h2>    
 
-                <div class="column">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur cursus orci eget dolor volutpat tempor. Fusce pretium sed nulla id rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ante orci, faucibus nec elit et, pellentesque lobortis eros. Nullam imperdiet, libero tincidunt consectetur mattis, lorem sapien venenatis lacus, in ullamcorper quam diam consequat ipsum. Nam vestibulum mi nisi. Maecenas diam leo, cursus sed consequat id, adipiscing quis elit. Aenean tellus massa, facilisis id commodo vitae, ultrices luctus augue. Mauris tellus nunc, suscipit ac sem non, molestie suscipit neque. Duis lacinia non nulla vel lobortis.</div>
+                <!-- column 1 --------------------------------------------- -->
+                <div class="column">
 
-                <div class="column">Donec rhoncus consequat volutpat. Sed molestie orci magna, eu lobortis lorem elementum eget. Nam at purus convallis sem imperdiet commodo. Donec viverra ipsum eros, eu accumsan mi elementum eget. Vivamus hendrerit ligula non imperdiet varius. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur gravida eu risus nec eleifend. Integer id imperdiet tellus. Proin placerat blandit ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin felis odio, accumsan id pulvinar vitae, iaculis ultrices mi. Nunc quam ipsum, porta et elementum sed, dapibus sed dui. Etiam vitae turpis ut ipsum sollicitudin aliquam vitae id eros. Pellentesque euismod purus vel enim malesuada iaculis.</div>
+<h3><span>It's build from atoms</span></h3>
+<p>As <a href="http://bradfrostweb.com/">Brad Frost</a> said <em>"Atomic design is methodology for creating design systems"</em>. By definition the atom is a basic unit of matter. In the context of OrganicCSS the atom is simply a property and its value. For example:<pre>
+font-size: 20px;
+</pre>That's the smallest piece of your CSS code. Isn't it?
+</p>
+
+                </div>
+
+                <!-- column 2 --------------------------------------------- -->
+                <div class="column">
+                    
+<h3>There are some predefined atoms</h3>
+<p>The atoms are the thing which will be transfered from project to project. This means that you really don't need to define them again and again. OrganicCSS will take care about this. The following snippet shows how to include atoms into your selector.<pre>
+.login-box {
+@include atoms((
+block,
+margin-top-20,
+font-size-14,
+bold
+));
+}                        
+</pre></p>
+
+                </div>
 
             </section>
 

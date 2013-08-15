@@ -3,9 +3,13 @@
 	@include header-title;
 	@include header-column;
 	@include header-column-link;
+	@include header-title-small-text;
 }
 .content {
 	@include content;
 	@include content-title;
+	@include content-sub-title;
 	@include content-column;
+	@include content-text;
+	@include content-code;
 }

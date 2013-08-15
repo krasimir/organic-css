@@ -11,12 +11,12 @@
 	h1 {
 		@include atoms((
 			font-size-50,
+			line-height-50,
 			one-third,
 			left,
 			normal,
-			header-title-color,
+			header-text-color,
 			header-title-shadow,
-			padding-top-20,
 			center-text
 		));
 		@include break-point-lower-than(900px) {
@@ -30,6 +30,17 @@
 		}
 	}
 }
+@mixin header-title-small-text {
+	h1 small {
+		@include atoms((
+			block,
+			font-size-14,
+			line-height-18,
+			no-text-shadow,
+			bold
+		));
+	}
+}
 @mixin header-column {
 	h2 {
 		@include atoms((
@@ -38,7 +49,8 @@
 			normal,
 			header-column-left-border,
 			padding-left-20,
-			center-text
+			center-text,
+			header-text-color
 		));
 		@include break-point-lower-than(900px) {
 			border-left: none;
@@ -52,7 +64,8 @@
 	a {
 		@include atoms((
 			block,
-			font-size-14
+			font-size-14,
+			header-text-color
 		));
 	}
 }

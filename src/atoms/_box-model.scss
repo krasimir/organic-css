@@ -1,6 +1,7 @@
 // margin
 %margin-reset { margin: 0; }
 %margin-centered { margin: 0 auto; }
+@include generate-placeholder('margin', 0, 100);
 @include generate-placeholder('margin-top', 0, 100);
 @include generate-placeholder('margin-right', 0, 100);
 @include generate-placeholder('margin-bottom', 0, 100);
@@ -8,6 +9,7 @@
 
 // padding
 %padding-reset { padding: 0; }
+@include generate-placeholder('padding', 0, 100);
 @include generate-placeholder('padding-top', 0, 100);
 @include generate-placeholder('padding-right', 0, 100);
 @include generate-placeholder('padding-bottom', 0, 100);

@@ -34,18 +34,15 @@
 %center-text {
 	text-align: center;
 }
+%no-style {
+	font-style: normal;
+}
+%word-wrap {
+	word-wrap: break-word;
+}
 
 @mixin font($f...) {
 	font-family: $f;
-}
-
-@mixin color($color: #000, $light: 0, $dark: 0) {
-	color: $color;
-	@if $light != 0 {
-		color: lighten($color, $light);
-	} @else if $dark != 0 {
-		color: darken($color, $dark);
-	}
 }
 
 @include generate-placeholder('font-size', 1, 100);
