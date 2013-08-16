@@ -308,3 +308,30 @@ footer, .content {
 .content h3:before {
   content: "♦";
 }
+@media all and (max-width: 980px) {
+  .content .content-column-left {
+    padding-left: 20px;
+  }
+}
+@media all and (max-width: 700px) {
+  .content .content-column-left {
+    padding-left: 20px;
+    padding-right: 20px;
+    float: none;
+    width: 100%;
+  }
+}
+@media all and (max-width: 980px) {
+  .content .content-column-right {
+    padding-right: 20px;
+  }
+}
+@media all and (max-width: 700px) {
+  .content .content-column-right {
+    padding-left: 20px;
+    padding-right: 20px;
+    float: none;
+    width: 100%;
+    margin-top: 20px;
+  }
+}

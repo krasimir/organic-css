@@ -18,6 +18,15 @@
 			italic,
 			content-description-text
 		));
+		@include break-point-lower-than(980px) {
+			padding-left: 20px;
+		}
+		@include break-point-lower-than(700px) {
+			padding-left: 20px;
+			padding-right: 20px;
+			float: none;
+			width: 100%;
+		}
 	}
 }
 @mixin content-column-right {
@@ -30,6 +39,16 @@
 			font-size-16,
 			line-height-26
 		));
+		@include break-point-lower-than(980px) {
+			padding-right: 20px;
+		}
+		@include break-point-lower-than(700px) {
+			padding-left: 20px;
+			padding-right: 20px;
+			float: none;
+			width: 100%;
+			margin-top: 20px;
+		}
 	}
 }
 @mixin content-sub-title {
