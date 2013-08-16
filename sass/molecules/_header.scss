@@ -1,0 +1,71 @@
+@mixin header {
+	@include atoms((
+		clearfix,
+		padding-top-40,
+		padding-bottom-40,
+		header-bottom-border,
+		margin-bottom-20
+	));
+}
+@mixin header-title {
+	h1 {
+		@include atoms((
+			font-size-50,
+			line-height-50,
+			one-third,
+			left,
+			normal,
+			header-text-color,
+			header-title-shadow,
+			center-text
+		));
+		@include break-point-lower-than(900px) {
+			font-size: 40px;
+		}
+		@include break-point-lower-than(620px) {
+			float: none;
+			width: 100%;
+			padding-top: 0;
+			padding-bottom: 40px;
+		}
+	}
+}
+@mixin header-title-small-text {
+	h1 small {
+		@include atoms((
+			block,
+			font-size-14,
+			line-height-18,
+			no-text-shadow,
+			bold
+		));
+	}
+}
+@mixin header-column {
+	h2 {
+		@include atoms((
+			one-third,
+			left,
+			normal,
+			header-column-left-border,
+			padding-left-20,
+			center-text,
+			header-text-color
+		));
+		@include break-point-lower-than(900px) {
+			border-left: none;
+		}
+		@include break-point-lower-than(620px) {
+			width: 50%;
+		}
+	}
+}
+@mixin header-column-link {
+	a {
+		@include atoms((
+			block,
+			font-size-14,
+			header-text-color
+		));
+	}
+}

@@ -1,0 +1,10 @@
+footer {
+	@include atoms((
+		block,
+		margin-top-40,
+		margin-bottom-40,
+		center-text,
+		content-top-border,
+		padding-top-20
+	));
+}

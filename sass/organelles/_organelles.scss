@@ -1,0 +1,20 @@
+.header {
+	@include header;
+	@include header-title;
+	@include header-column;
+	@include header-column-link;
+	@include header-title-small-text;
+}
+.big-title {
+	@include big-title;
+}
+.content {
+	@include content;
+	@include content-sub-title;
+	@include content-column-left;
+	@include content-column-right;
+	@include content-text;
+	@include content-code;
+	@include content-block-title;
+	@include content-list;
+}

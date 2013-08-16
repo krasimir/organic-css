@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Organic CSS</title>
+        <link rel="stylesheet" href="css/styles.css" type="text/css">
+	</head>
+    <body>        
+        <div class="container">
+
+            <header class="header">
+                <h1>oCSS<small>organic cascade style sheet</small></h1>
+                <h2>
+                    It's SASS based
+                    <a href="http://sass-lang.com/">CSS preprocessor</a>
+                </h2>
+                <h2>
+                    It's open source
+                    <a href="https://github.com/krasimir/organic-css">GitHub repository</a>
+                </h2>
+            </header>
+
+            <h2 class="big-title">Micro framework following atomic design.</h2>
+
+            <!-- ******************************* ATOMS -- -->
+            <section class="content">               
+
+                <div class="content-column-left">
+                    <h3>Atoms</h3>
+                    <p>As <a href="http://bradfrostweb.com/">Brad Frost</a> said <em>"Atoms are the basic building blocks of matter"</em>.In the context of OrganicCSS the atom is simply a property and its value.
+                    </p>
+                </div>
+                <div class="content-column-right">
+                    <h4>Example of an atom</h4>
+                    <pre>font-size: 20px;</pre>
+                    <h4>Definition</h4>
+                    <p>There is mixin which helps during the process. It actually registers a placeholder with the given name. Sure, you can do that manually, but the idea is to remember you (and your team mates) that this is an atom.</p>
+                    <pre>@include define-atom("block") {
+    display: block;
+}
+@include define-atom("font-family") {
+    font-family: Georgia;
+}</pre>
+                    <h4>Using atoms</h4>
+                    <p>There is again a mixin for that.<p><pre>.login-box {
+    @include atoms((
+        block,
+        font-family
+    ));
+}                        
+</pre>
+                    <h4>Available atoms</h4>
+                    <p>The main idea of OrganicCSS is to provide the atoms. Very often what you build with them will be different. But the atoms are so generic and you can transfer them from project to project. A full list could be seen <a href="https://github.com/krasimir/organic-css/tree/master/src/atoms">here</a>. </p>
+                </div>
+            </section>
+
+            <!-- ******************************* MOLECULES -- -->
+            <section class="content">
+                <div class="content-column-left">
+                    <h3>Molecules</h3>
+                    <p>Molecule is a DOM element which needs styling, but doesn't have children. Or if it has children they are not directly connected to it. For example<br /><em>&lt;img src="logo.jpg" /></em> could be a molecule. If you find difficult to recognize the molecules in your page, just thing of what is build by atoms. If some element is build by other molecules it is probably an organel.</p>
+                </div>
+                <div class="content-column-right">
+                    <h4>Definition</h4>
+                    <pre>@mixin header {
+    @include atoms((
+        block,
+        clearfix,
+        font-family
+    ));
+}</pre>
+                    <p>And remember, the molecule should be build only by atoms.</p>
+                    <h4>Using molecules</h4>
+                    <pre>.header {
+    @include header;
+    @include header-title;
+    @include header-column;
+    @include header-column-link;
+    @include header-title-small-text;
+}</pre>             
+                    <p>Simply include the mixins. The thing which uses molecules is the organel.</p>
+                </div>
+            </section>
+
+            <!-- ******************************* Organelle -- -->
+            <section class="content">
+                <div class="content-column-left">
+                    <h3>Organelles</h3>
+                    <p>Once you recognize which DOM elements are molecules you will see what organelles are. For example the typical <em>&lt;form&gt;</em> element is a great example of organel. It contains molecules like label, input or textarea.</p>
+                </div>
+                <div class="content-column-right">
+                    <h4>Definition and usage</h4>
+                    <pre>.header {
+    @include header;
+    @include header-title;
+    @include header-column;
+    @include header-column-link;
+    @include header-title-small-text;
+}</pre>
+The definition of organelles is actually writing selectors and including molecules (mixins). You should not apply any css rules directly here. That's what atoms and molecules for.
+                </div>
+            </section>
+
+            <!-- ******************************* Other -- -->
+            <section class="content">
+                <div class="content-column-left">
+                    <h3>More abstractions</h3>
+                    <p>It's a matter of choice how you will continue abstracting your CSS.</p>
+                </div>
+                <div class="content-column-right">
+                    <p>The next thing after the organelle is a cell. So, it is normal to say that something which contains organelles is a cell. This could be the &lt;body&gt; tag or a &lt;div&gt; element. Sure, you can use the following hierarchy <em>Atom &#8594; Molecule &#8594; Organelle &#8594; Cell &#8594; Tissue &#8594; Organ &#8594; Sys &#8594; Organism</em>, but you may have more then 8 nested blocks. Also there are elements which need CSS styling happening via atoms, but they are not molecules. Like for example your main container. It is obvious that it is not a molecule, because it contains probably organelles. To simplify the things I decided to forget about the HTML markup and look only the stylesheets. If something needs atoms and nothing else then it is a molecule. If I need to put an organelle inside it, then it is a cell and so on. 
+                    </p>
+                </div>
+            </section>
+
+            <footer>
+                OrganicCSS<br />
+                <a href="https://github.com/krasimir/organic-css">https://github.com/krasimir/organic-css</a>
+            </footer>
+            
+        </div>
+    </body>
+</html>
