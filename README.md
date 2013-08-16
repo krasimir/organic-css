@@ -1,5 +1,4 @@
 # oCSS
-===========
 
 Micro SASS framework based on Organic/Atomic concept.
 
