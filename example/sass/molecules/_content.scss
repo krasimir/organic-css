@@ -1,71 +1,69 @@
 @mixin content {
 	@include atoms((
-		margin-top-40
+		margin-top-40,
+		content-top-border,
+		padding-top-30,
+		clearfix
 	));
 }
-@mixin content-column {
-	.column {
+@mixin content-column-left {
+	.content-column-left {
 		@include atoms((
 			block,
-			one-half,
-			left
+			left,
+			one-third,
+			padding-right-20,
+			font-size-16,
+			line-height-26,
+			italic,
+			content-description-text
 		));
 	}
-	.column:nth-child(2) {
-		@include atoms(padding-right-20);
-	}
-	.column:nth-child(3) {
-		@include atoms(padding-left-20);
-	}
 }
-@mixin content-title {
-	h2 {
+@mixin content-column-right {
+	.content-column-right {
 		@include atoms((
-			font-size-80,
-			center-text,
-			normal,
-			margin-bottom-30,
-			line-height-80
+			block,
+			left,
+			two-thirds,
+			padding-left-20,
+			font-size-16,
+			line-height-26
 		));
 	}
 }
 @mixin content-sub-title {
 	h3 {
 		@include atoms((
-			font-size-24,
-			center-text,
+			font-size-34,
+			line-height-30,
 			normal,
-			margin-bottom-20,
-			padding-top-20,
-			margin-top-20,
-			italic,
-			content-sub-title-color,
-			content-title-border
+			margin-bottom-10,
+			black,
+			no-style
 		));
 		&:before {
 			content: "♦";
 			@include atoms((
-				font-size-18,
+				font-size-20,
 				inline-block,
 				padding-right-12,
 				no-style
 			));
 		}
-		&:after {
-			content: "♦";
-			@include atoms((
-				font-size-18,
-				inline-block,
-				padding-left-12,
-				no-style
-			));
-		}
+	}
+}
+@mixin content-block-title {
+	h4 {
+		@include atoms(bold);
+	}
+	h4:nth-of-type(n+2) {
+		@include atoms(margin-top-20);
 	}
 }
 @mixin content-text {
 	p {
 		@include atoms((
-			font-size-16,
 			normal
 		));
 	}
@@ -87,6 +85,14 @@
 			code-font-family,
 			word-wrap,
 			line-height-20
+		));
+	}
+}
+@mixin content-list {
+	ul {
+		@include atoms((
+			margin-left-22,
+			normal
 		));
 	}
 }

@@ -5,11 +5,16 @@
 	@include header-column-link;
 	@include header-title-small-text;
 }
+.big-title {
+	@include big-title;
+}
 .content {
 	@include content;
-	@include content-title;
 	@include content-sub-title;
-	@include content-column;
+	@include content-column-left;
+	@include content-column-right;
 	@include content-text;
 	@include content-code;
+	@include content-block-title;
+	@include content-list;
 }

@@ -23,13 +23,12 @@ $color-b: #A7A7A7;
 	@include text-shadow(1px, -1px, 1px, $color-b);
 }
 
-
-@include define-atom("content-sub-title-color") {
-	@include color($color-b, 0, 20%);
-}
 @include define-atom("content-code-bg-color") {
 	@include bg-color($color-b, 30%);
 }
-@include define-atom("content-title-border") {
-	@include border(solid 1px $color-b, null, null, null);
+@include define-atom("content-top-border") {
+	@include border(dotted 1px $color-b, null, null, null);
+}
+@include define-atom("content-description-text") {
+	@include color($color-b, 0, 20%);
 }
