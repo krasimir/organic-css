@@ -90,13 +90,15 @@ body {
   line-height: 22px;
 }
 
+body {
+  line-height: 28px;
+}
+
 .content .content-column-left, .content .content-column-right {
   line-height: 26px;
 }
 
-body {
-  line-height: 28px;
-}
+
 
 .content h3 {
   line-height: 30px;
