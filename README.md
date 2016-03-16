@@ -1,6 +1,6 @@
 # oCSS
 
-Micro SASS framework based on Organic/Atomic concept.
+Micro Sass framework based on Organic/Atomic concept.
 
 ===========
 

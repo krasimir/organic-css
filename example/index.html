@@ -5,13 +5,13 @@
 		<title>Organic CSS</title>
         <link rel="stylesheet" href="css/styles.css" type="text/css">
 	</head>
-    <body>        
+    <body>
         <div class="container">
 
             <header class="header">
                 <h1>oCSS<small>organic cascade style sheet</small></h1>
                 <h2>
-                    It's SASS based
+                    It's Sass based
                     <a href="http://sass-lang.com/">CSS preprocessor</a>
                 </h2>
                 <h2>
@@ -23,7 +23,7 @@
             <h2 class="big-title">Micro framework following atomic design.</h2>
 
             <!-- ******************************* ATOMS -- -->
-            <section class="content">               
+            <section class="content">
 
                 <div class="content-column-left">
                     <h3>Atoms</h3>
@@ -47,7 +47,7 @@
         block,
         font-family
     ));
-}                        
+}
 </pre>
                     <h4>Available atoms</h4>
                     <p>The main idea of OrganicCSS is to provide the atoms. Very often what you build with them will be different. But the atoms are so generic and you can transfer them from project to project. A full list could be seen <a href="https://github.com/krasimir/organic-css/tree/master/src/atoms">here</a>. </p>
@@ -77,7 +77,7 @@
     @include header-column;
     @include header-column-link;
     @include header-title-small-text;
-}</pre>             
+}</pre>
                     <p>Simply include the mixins. The thing which uses molecules is the organel.</p>
                 </div>
             </section>
@@ -108,7 +108,7 @@ The definition of organelles is actually writing selectors and including molecul
                     <p>It's a matter of choice how you will continue abstracting your CSS.</p>
                 </div>
                 <div class="content-column-right">
-                    <p>The next thing after the organelle is a cell. So, it is normal to say that something which contains organelles is a cell. This could be the &lt;body&gt; tag or a &lt;div&gt; element. Sure, you can use the following hierarchy <em>Atom &#8594; Molecule &#8594; Organelle &#8594; Cell &#8594; Tissue &#8594; Organ &#8594; Sys &#8594; Organism</em>, but you may have more then 8 nested blocks. Also there are elements which need CSS styling happening via atoms, but they are not molecules. Like for example your main container. It is obvious that it is not a molecule, because it contains probably organelles. To simplify the things I decided to forget about the HTML markup and look only the stylesheets. If something needs atoms and nothing else then it is a molecule. If I need to put an organelle inside it, then it is a cell and so on. 
+                    <p>The next thing after the organelle is a cell. So, it is normal to say that something which contains organelles is a cell. This could be the &lt;body&gt; tag or a &lt;div&gt; element. Sure, you can use the following hierarchy <em>Atom &#8594; Molecule &#8594; Organelle &#8594; Cell &#8594; Tissue &#8594; Organ &#8594; Sys &#8594; Organism</em>, but you may have more then 8 nested blocks. Also there are elements which need CSS styling happening via atoms, but they are not molecules. Like for example your main container. It is obvious that it is not a molecule, because it contains probably organelles. To simplify the things I decided to forget about the HTML markup and look only the stylesheets. If something needs atoms and nothing else then it is a molecule. If I need to put an organelle inside it, then it is a cell and so on.
                     </p>
                 </div>
             </section>
@@ -117,7 +117,7 @@ The definition of organelles is actually writing selectors and including molecul
                 OrganicCSS<br />
                 <a href="https://github.com/krasimir/organic-css">https://github.com/krasimir/organic-css</a>
             </footer>
-            
+
         </div>
     </body>
 </html>
